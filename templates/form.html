@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cardiovascular Disease Risk Prediction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      h1, h2 {
+        text-align: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      div {
+        margin-bottom: 15px;
+      }
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type="text"], select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cardiovascular Disease Risk Prediction</h1>
+    <h2>Fill Out the Following:</h2>
+    <form action="/submit" method="post">
+      <div>
+        <label for="name">Enter your Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div>
+        <label for="gender">Enter your Gender:</label>
+        <input type="text" id="gender" name="gender">
+      </div>
+      <div>
+        <label for="age">Enter your Age:</label>
+        <input type="text" id="age" name="age">
+      </div>
+      <div>
+        <label for="height">What is your height (in meters)?:</label>
+        <input type="text" id="height" name="height">
+      </div>
+      <div>
+        <label for="weight">What is your weight (in kilograms)?:</label>
+        <input type="text" id="weight" name="weight">
+      </div>
+      <div>
+        <label for="health">Considering your overall physical well-being, how would you describe your general health?:</label>
+        <select id="health" name="health" required>
+          <option value="" disabled selected>Select your option</option>
+          <option value="excellent">Excellent</option>
+          <option value="good">Good</option>
+          <option value="fair">Fair</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+      <div>
+        <label for="checkup">About how long has it been since you last visited a doctor for a routine checkup?:</label>
+        <select id="checkup" name="checkup" required>
+          <option value="" disabled selected>Select your option</option>
+          <option value="within past year">Within past year</option>
+          <option value="within past 2 years">Within past 2 years</option>
+          <option value="within past 5 years">Within past 5 years</option>
+          <option value="5 or more years ago">5 or more years ago</option>
+          <option value="never">Never</option>
+        </select>
+      </div>
+      <div>
+        <label for="diabetes">What is your diabetes status?:</label>
+        <select id="diabetes" name="diabetes" required>
+          <option value="" disabled selected>Select your option</option>
+          <option value="Doesn't Have Diabetes">Doesn't Have Diabetes</option>
+          <option value="Has Diabetes">Has Diabetes</option>
+          <option value="Had Diabetes During Pregnancy">Had Diabetes During Pregnancy</option>
+          <option value="Has Pre-Diabetes Or Borderline Diabetes">Has Pre-Diabetes Or Borderline Diabetes</option>
+        </select>
+      </div>
+      <div>
+        <label for="smoking">What is your current smoking status?:</label>
+        <select id="smoking" name="smoking" required>
+          <option value="" disabled selected>Select your option</option>
+          <option value="never_smoked">Never smoked</option>
+          <option value="former_smoker">Former smoker</option>
+          <option value="smoke some days">Smoke some days</option>
+          <option value="smoke every day">Smoke every day</option>
+        </select>
+      </div>
+      <div>
+        <label for="exercise">In the previous month, apart from your typical work activities, did you take part in any forms of exercise or recreational activities like jogging, calisthenics, golfing, gardening, or walking for fitness purposes?:</label>
+        <select id="exercise" name="exercise" required>
+          <option value="" disabled selected>Select your option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div>
+        <label for="mental_health">How would you rate your overall mental health over the past month?:</label>
+        <select id="mental_health" name="mental_health" required>
+          <option value="" disabled selected>Select your option</option>
+          <option value="better">Better</option>
+          <option value="good">Good</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+      <div>
+        <label for="physical_health">How would you rate your overall physical health over the past month?:</label>
+        <select id="physical_health" name="physical_health" required>
+          <option value="" disabled selected>Select your option</option>
+          <option value="better">Better</option>
+          <option value="good">Good</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+      <div>
+        <label for="aids">Have you been diagnosed with AIDS?:</label>
+        <select id="aids" name="aids" required>
+          <option value="" disabled selected>Select your option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div>
+        <label for="arthritis">Has a healthcare professional ever diagnosed you with Arthritis?:</label>
+        <select id="arthritis" name="arthritis" required>
+          <option value="" disabled selected>Select your option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit">Predict</button>
+      </div>
+    </form>
+  </body>
+</html>
